@@ -1,0 +1,394 @@
+@import url(font-awesome.min.css);
+
+/* NORMALIZER */
+:root {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    --primary-color: #ffc800;
+    --secondary-color: black;
+    --third-color: white;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.container {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.nav-list {
+    display: none;
+}
+
+.nav-burger {
+    display: block;
+    font-size: 3rem;
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        padding: 2rem 4rem;
+    }
+
+    .nav-burger {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .nav-item {
+        width: 20rem;
+        height: 5rem;
+        background-color: var(--secondary-color);
+        border-radius: 0.5rem;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--third-color);
+    }
+
+}
+
+/*resume section*/
+.hero-section {
+    height: 100vh;
+    position: relative;
+    top: 5rem;
+    ;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(196, 196, 196, 0.516);
+    border: 1px solid rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    width: 100%;
+    height: 20rem;
+}
+
+.card-ttl {
+    font-size: 3rem;
+}
+
+.card-txt {
+    font-size: 2.5rem;
+    font-weight: lighter;
+
+}
+
+.presentation {
+    color: var(--third-color);
+    background-color: var(--secondary-color);
+    height: 40rem;
+    padding: 2rem;
+}
+
+.presentation-content {
+    font-size: 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .hero-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+    }
+
+    .card {
+        position: relative;
+        left: 10rem;
+        height: 40rem;
+        width: 70rem;
+        padding: 5rem;
+        gap: 7rem;
+
+    }
+
+    .card-ttl {
+        font-size: 5rem;
+    }
+
+    .presentation {
+        height: 650px;
+        width: 750px;
+        padding: 8rem 11rem;
+    }
+}
+
+
+.resume-section {
+    margin-top: calc(5rem + 1rem)
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.exp-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-btn-list {
+    margin-bottom: 2rem;
+    border: 3px solid var(--secondary-color);
+    align-self: center;
+}
+
+.btn {
+    font-size: 2rem;
+    background-color: none;
+    padding: 0.5rem 2rem;
+
+}
+.exp-btn{
+    color: var(--secondary-color);
+}
+
+.degree-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.exp-btn.active,.degree-btn.active{
+    font-weight: 700;
+    text-decoration:underline ;
+}
+
+
+.degree,
+.exp {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 26rem;
+}
+
+.exp {
+
+    background-color: var(--secondary-color);
+}
+
+.degree {
+    background-color: #ffc800;
+    border: 3px solid var(--secondary-color);
+}
+
+.exp-title{
+
+    font-size: 2rem;
+}
+.degree-title {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    word-break:break-word;
+}
+
+.exp-title {
+    color: var(--primary-color);
+}
+
+
+.exp-list {
+    display: none;
+}
+
+.exp-list.active {
+    display: block;
+}
+
+.exp-company {
+    color: var(--third-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.exp-date {
+    color: var(--third-color);
+}
+.degree-date{
+    color: var(--secondary-color);
+}
+
+@media screen and (min-width:768px) {
+    .resume-section {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .resume-title {
+        margin-bottom: 3rem;
+    }
+
+    .exp,.degree {
+    width:50rem;
+        padding: 3rem;
+    }
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    gap: 2rem;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+    border: 100%;
+    gap: 1rem;
+    width: 100%;
+    border: 3px solid black;
+}
+
+.ttl-of-skills{
+  width: 100%;
+  border: 3px solid black;
+  padding: 1rem ;
+  font-size: 2rem;
+}
+.list-skill{
+    
+}
+.skill-img {
+    grid-column: 1/2;
+    width: 5rem;
+}
+
+.skill-name {
+   grid-column: 2/3;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.project {
+    width: 100%;
+    max-width: 40rem;
+    height: 25rem;
+    background-color: var(--secondary-color);
+}
+
+.project-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    .project-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .project {
+        max-width: 45rem;
+        width: 100%;
+        height: 40rem;
+    }
+
+}
